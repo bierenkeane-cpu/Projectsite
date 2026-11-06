@@ -26,52 +26,46 @@
         </ul>
     </nav>
 
-   <div class="chat-container">
-    <div class="chat-header">
-        <h3>ROTC Assistance</h3>
-        <button onclick="toggleChat()">−</button>
+  <!-- CHAT SECTION -->
+<section class="chat-section">
+
+    <div class="chat-title">
+        <p class="eyebrow">ROTC SUPPORT CENTER</p>
+        <h2>How Can We Help You?</h2>
+        <p>
+            Have questions or concerns? Send us a message
+            through our ROTC assistance center.
+        </p>
     </div>
 
-    <div class="chat-body" id="chatBody">
-        <div class="bot-message">
-            Welcome! How can we assist you today?
+    <div class="chat-container">
+
+        <div class="chat-header">
+            <div>
+                <h3>ROTC Assistance</h3>
+                <span>Online Support</span>
+            </div>
+            <span class="chat-status">● Online</span>
         </div>
+
+        <div class="chat-body" id="chatBody">
+            <div class="bot-message">
+                Welcome to ROTC Assistance!
+                How can we help you today?
+            </div>
+        </div>
+
+        <div class="chat-input">
+            <input
+                type="text"
+                id="userInput"
+                placeholder="Type your message..."
+                onkeydown="if(event.key === 'Enter') sendMessage()"
+            >
+            <button onclick="sendMessage()">Send</button>
+        </div>
+
     </div>
-
-    <div class="chat-input">
-        <input type="text" id="userInput" placeholder="Type your message...">
-        <button onclick="sendMessage()">Send</button>
-    </div>
-</div>
-
-<script>
-    function toggleChat() {
-        const chat = document.querySelector(".chat-body");
-        const input = document.querySelector(".chat-input");
-
-        chat.style.display =
-            chat.style.display === "none" ? "block" : "none";
-
-        input.style.display =
-            input.style.display === "none" ? "flex" : "none";
-    }
-
-    function sendMessage() {
-        const input = document.getElementById("userInput");
-        const chatBody = document.getElementById("chatBody");
-
-        if (input.value.trim() === "") return;
-
-        const message = document.createElement("div");
-        message.className = "user-message";
-        message.textContent = input.value;
-
-        chatBody.appendChild(message);
-
-        input.value = "";
-        chatBody.scrollTop = chatBody.scrollHeight;
-    }
-</script>
   
 
     
