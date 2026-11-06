@@ -1,22 +1,23 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Philippine Army | Home</title>
+    <title>ROTC Assistance Center</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-   
+    <!-- HEADER -->
     <header>
         <p class="subtitle">REPUBLIC OF THE PHILIPPINES</p>
         <h1>RESERVE OFFICERS TRAINING CORPS</h1>
         <p>Service, Honor, Excellence</p>
     </header>
 
-    
+    <!-- NAVIGATION BAR -->
     <nav class="navbar">
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -26,57 +27,62 @@
         </ul>
     </nav>
 
-  
-<!-- CHAT SECTION -->
-<section class="chat-section">
+    <!-- CHAT SECTION -->
+    <section class="chat-section">
 
-    <div class="chat-title">
-        <p class="eyebrow">ROTC SUPPORT CENTER</p>
-        <h2>How Can We Help You?</h2>
-        <p>
-            Have questions or concerns? Send us a message
-            through our ROTC assistance center.
-        </p>
-    </div>
+        <div class="chat-title">
+            <p class="eyebrow">ROTC SUPPORT CENTER</p>
 
-    <div class="chat-container">
+            <h2>How Can We Help You?</h2>
 
-        <div class="chat-header">
-            <div>
-                <h3>ROTC Assistance</h3>
-                <span>Online Support</span>
+            <p>
+                Have questions or concerns? Send us a message
+                through our ROTC assistance center.
+            </p>
+        </div>
+
+        <!-- CHAT CONTAINER -->
+        <div class="chat-container">
+
+            <!-- CHAT MESSAGES -->
+            <div class="chat-body" id="chatBody">
+                <div class="bot-message">
+                    Welcome to ROTC Assistance!
+                    What would you like to know today?
+                </div>
             </div>
-            <span class="chat-status">● Online</span>
-        </div>
 
-        <div class="chat-body" id="chatBody">
-            <div class="bot-message">
-                Welcome to ROTC Assistance!
-                How can we help you today?
+            <!-- MESSAGE INPUT -->
+            <div class="chat-input">
+                <input
+                    type="text"
+                    id="userInput"
+                    placeholder="Ask anything..."
+                    onkeydown="if(event.key === 'Enter') sendMessage()"
+                >
+
+                <button onclick="sendMessage()" aria-label="Send message">
+                    &uarr;
+                </button>
             </div>
+
+            <p class="chat-disclaimer">
+                ROTC Assistance • Educational Website
+            </p>
+
         </div>
 
-        <div class="chat-input">
-            <input
-                type="text"
-                id="userInput"
-                placeholder="Type your message..."
-                onkeydown="if(event.key === 'Enter') sendMessage()"
-            >
-            <button onclick="sendMessage()">Send</button>
-        </div>
+    </section>
 
-    </div>
-
-</section>
-
-    
+    <!-- FOOTER -->
     <footer>
         <h2>PHILIPPINE ARMY</h2>
         <p>Service, Honor, Excellence</p>
+
         <p class="disclaimer">
             Educational website project. Not an official government website.
         </p>
+
         <p>&copy; 2026 | Website Project</p>
     </footer>
 
