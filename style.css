@@ -241,6 +241,7 @@ footer h2 {
     font-size: 12px;
 }
 
+
 /* =========================
    CHAT SECTION
 ========================= */
@@ -387,6 +388,28 @@ footer h2 {
     background-color: #465B3B;
 }
 
+/* Mobile Responsive */
+@media screen and (max-width: 750px) {
+    .chat-section {
+        padding: 45px 15px;
+    }
+
+    .chat-container {
+        height: 450px;
+    }
+
+    .chat-title h2 {
+        font-size: 32px;
+    }
+
+    .chat-input {
+        padding: 12px;
+    }
+
+    .chat-input button {
+        padding: 10px 15px;
+    }
+}
 /* Mobile Responsive */
 @media screen and (max-width: 750px) {
     .chat-section {
