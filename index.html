@@ -26,91 +26,53 @@
         </ul>
     </nav>
 
-   
-    <section class="hero">
-        <div class="hero-content">
-            <p class="eyebrow">DUTY • HONOR • COUNTRY</p>
-            <h2>Dedicated to Serving the Nation</h2>
-            <p>
-                Recognizing the commitment, discipline, and service
-                of those who dedicate themselves to the protection
-                and security of the Filipino people.
-            </p>
-            <a href="#about" class="hero-button">Discover More</a>
+   <div class="chat-container">
+    <div class="chat-header">
+        <h3>ROTC Assistance</h3>
+        <button onclick="toggleChat()">−</button>
+    </div>
+
+    <div class="chat-body" id="chatBody">
+        <div class="bot-message">
+            Welcome! How can we assist you today?
         </div>
-    </section>
+    </div>
 
-    
-    <main>
+    <div class="chat-input">
+        <input type="text" id="userInput" placeholder="Type your message...">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+</div>
 
-   
-        <section id="about" class="content-section">
-            <h2>About This Website</h2>
-            <p>
-                This website is designed to present information about
-                military tasking, organizational responsibilities,
-                and announcements in a clear and accessible format.
-            </p>
-        </section>
+<script>
+    function toggleChat() {
+        const chat = document.querySelector(".chat-body");
+        const input = document.querySelector(".chat-input");
 
-    
-        <section id="tasking" class="content-section">
-            <h2>Explore Our Website</h2>
-            <p class="section-intro">
-                Browse the sections below to learn more.
-            </p>
+        chat.style.display =
+            chat.style.display === "none" ? "block" : "none";
 
-            <div class="card-container">
+        input.style.display =
+            input.style.display === "none" ? "flex" : "none";
+    }
 
-                <article class="info-card">
-                    <div class="card-icon">01</div>
-                    <h3>Tasking</h3>
-                    <p>
-                        View general information about assigned
-                        responsibilities and organizational duties.
-                    </p>
-                    <a href="#tasking">Learn More &rarr;</a>
-                </article>
+    function sendMessage() {
+        const input = document.getElementById("userInput");
+        const chatBody = document.getElementById("chatBody");
 
-                <article class="info-card">
-                    <div class="card-icon">02</div>
-                    <h3>About Us</h3>
-                    <p>
-                        Discover the purpose, values, and mission
-                        of this educational website.
-                    </p>
-                    <a href="#about">Learn More &rarr;</a>
-                </article>
+        if (input.value.trim() === "") return;
 
-                <article class="info-card">
-                    <div class="card-icon">03</div>
-                    <h3>Announcements</h3>
-                    <p>
-                        Find updates and notices relevant to the
-                        website and its activities.
-                    </p>
-                    <a href="#announcements">View Updates &rarr;</a>
-                </article>
+        const message = document.createElement("div");
+        message.className = "user-message";
+        message.textContent = input.value;
 
-            </div>
-        </section>
+        chatBody.appendChild(message);
 
-    
-        <section id="announcements" class="content-section announcements">
-            <h2>News & Announcements</h2>
-            <div class="announcement-item">
-                <span class="announcement-label">NOTICE</span>
-                <div>
-                    <h3>Welcome to Our Website</h3>
-                    <p>
-                        Explore our website to learn about its
-                        content, purpose, and available sections.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-    </main>
+        input.value = "";
+        chatBody.scrollTop = chatBody.scrollHeight;
+    }
+</script>
+  
 
     
     <footer>
