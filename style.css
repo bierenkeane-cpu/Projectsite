@@ -1,4 +1,8 @@
-*{
+
+/* =========================
+   GENERAL SETTINGS
+========================= */
+* {
     box-sizing: border-box;
 }
 
@@ -14,7 +18,9 @@ body {
     line-height: 1.7;
 }
 
-
+/* =========================
+   HEADER
+========================= */
 header {
     background-color: #26382A;
     color: white;
@@ -35,7 +41,9 @@ header h1 {
     margin: 0;
 }
 
-
+/* =========================
+   NAVIGATION BAR
+========================= */
 .navbar ul {
     list-style: none;
     display: flex;
@@ -59,7 +67,9 @@ header h1 {
     color: #F1D58A;
 }
 
-
+/* =========================
+   HERO SECTION
+========================= */
 .hero {
     min-height: 350px;
     display: flex;
@@ -112,7 +122,9 @@ header h1 {
     transform: translateY(-2px);
 }
 
-
+/* =========================
+   MAIN CONTENT
+========================= */
 main {
     max-width: 1150px;
     margin: auto;
@@ -133,6 +145,9 @@ main {
     color: #62685F;
 }
 
+/* =========================
+   CONTENT CARDS
+========================= */
 .card-container {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -175,7 +190,9 @@ main {
     color: #A8873D;
 }
 
-
+/* =========================
+   ANNOUNCEMENTS
+========================= */
 .announcements {
     padding-bottom: 50px;
 }
@@ -203,7 +220,9 @@ main {
     margin-top: 0;
 }
 
-
+/* =========================
+   FOOTER
+========================= */
 footer {
     background-color: #26382A;
     color: white;
@@ -222,7 +241,111 @@ footer h2 {
     font-size: 12px;
 }
 
+/* =========================
+   CHAT BOX
+========================= */
+.chat-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 320px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    z-index: 1000;
+}
 
+/* Chat Header */
+.chat-header {
+    background-color: #183B2B;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-header h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.chat-header button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* Chat Messages */
+.chat-body {
+    height: 250px;
+    padding: 15px;
+    overflow-y: auto;
+    background-color: #F5F5F5;
+}
+
+.bot-message,
+.user-message {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    max-width: 85%;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+.bot-message {
+    background-color: #E0E8E2;
+    color: #222;
+}
+
+.user-message {
+    background-color: #183B2B;
+    color: white;
+    margin-left: auto;
+}
+
+/* Chat Input */
+.chat-input {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #DDD;
+    gap: 5px;
+}
+
+.chat-input input {
+    flex: 1;
+    min-width: 0;
+    padding: 10px;
+    border: 1px solid #CCC;
+    border-radius: 6px;
+    outline: none;
+}
+
+.chat-input input:focus {
+    border-color: #465B3B;
+}
+
+.chat-input button {
+    background-color: #183B2B;
+    color: white;
+    border: none;
+    padding: 10px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.chat-input button:hover {
+    background-color: #28563E;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
 @media screen and (max-width: 750px) {
     .card-container {
         grid-template-columns: 1fr;
@@ -239,5 +362,13 @@ footer h2 {
     .announcement-item {
         flex-direction: column;
         gap: 10px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .chat-container {
+        width: calc(100% - 30px);
+        right: 15px;
+        bottom: 15px;
     }
 }
