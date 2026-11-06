@@ -242,6 +242,7 @@ footer h2 {
 }
 
 
+
 /* =========================
    CHAT SECTION
 ========================= */
@@ -410,54 +411,5 @@ footer h2 {
         padding: 10px 15px;
     }
 }
-/* Mobile Responsive */
-@media screen and (max-width: 750px) {
-    .chat-section {
-        padding: 45px 15px;
-    }
 
-    .chat-container {
-        height: 450px;
-    }
 
-    .chat-title h2 {
-        font-size: 32px;
-    }
-
-    .chat-input {
-        padding: 12px;
-    }
-
-    .chat-input button {
-        padding: 10px 15px;
-    }
-}
-/* =========================
-   RESPONSIVE DESIGN
-========================= */
-@media screen and (max-width: 750px) {
-    .card-container {
-        grid-template-columns: 1fr;
-    }
-
-    .hero {
-        padding: 45px 25px;
-    }
-
-    .navbar a {
-        padding: 12px 14px;
-    }
-
-    .announcement-item {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
-
-@media screen and (max-width: 400px) {
-    .chat-container {
-        width: calc(100% - 30px);
-        right: 15px;
-        bottom: 15px;
-    }
-}
